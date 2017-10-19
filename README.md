@@ -1,2 +1,2 @@
 # frontend-workshop
-frontend-workshop in Lausanne
+frontend-workshop in France for DL

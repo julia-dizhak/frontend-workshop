@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://mpcdn.ch/static/assets/dist/css/styles.min.css">
 {% endblock extra-styles %}
 
+{% block body_app %}ng-app="homepageApp"{% endblock body_app %}
+{% block body_ctrl %}ng-controller="homepageCtrl"{% endblock body_ctrl %}
+
 {% block content %}
 <div class="moneypark-news">
     {% spaceless %}
@@ -40,3 +43,10 @@
     {% endspaceless %}
 </div>
 {% endblock %}
+
+{% block js %}
+    <script src="{% static 'bower_components/angular/angular.js' %}"></script>
+    <script src="{% static 'bower_components/slick-carousel/slick/slick.js' %}"></script>
+    <script src="{% static 'bower_components/angular-slick-carousel/dist/angular-slick.js' %}"></script>
+    <!--json-->
+{% endblock js %}
