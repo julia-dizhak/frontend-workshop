@@ -1,0 +1,12 @@
+<svg
+  version="1.1"
+  baseprofile="full"
+  class="svg-arrow"
+  width="24"
+  height="24"
+  viewBox="0 0 148 148">
+  <g id="Layer_20" data-name="Layer 20">
+    <path d="M74 6A68 68 0 1 1 6 74 68.077 68.077 0 0 1 74 6m0-4a72 72 0 1 0 72 72A72 72 0 0 0 74 2z" class="cls-1"/>
+    <path d="M39.075 85.045h31.348v20.732L108.925 74 70.423 42.223v20.73H39.075v22.092z" class="cls-1"/>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% load svg %}
+
+{% block extra-styles %}
+    <!--<link rel="stylesheet" href="https://mpcdn.ch/static/assets/dist/css/styles.min.css">-->
+{% endblock extra-styles %}
+
+{% block content %}
+<div class="container">
+    <div class="blog">
+        {% spaceless %}
+            <h1 class="main-title">
+                <a href="https://moneypark.ch/news-wissen/" class="link-more">
+                    <span class="text">News &amp; Wissen</span>
+                    {% svg 'arrow' %}
+                </a>
+            </h1>
+            <ul class="news-list">
+                {% for post in posts %}
+                    <li class="news-item" itemscope itemtype="https://schema.org/BlogPosting">
+                        <article class="news-content">
+                            <header class="news-head">
+                                <a href="" class="news-title" target="_blank" itemprop="name">{{ post.title | safe }}</a>
+                            </header>
+                            <p class="news-desc" itemprop="description">
+                                <span class="news-desc-content">{{ post.text|linebreaksbr }}</span>
+                                <br>
+                                <time class="date">{{ post.published_date }}</time>
+                            </p>
+                        </article>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endspaceless %}
+    </div>
+</div>
+{% endblock %}
