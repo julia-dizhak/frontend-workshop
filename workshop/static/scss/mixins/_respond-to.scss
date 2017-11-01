@@ -1,0 +1,19 @@
+// Respond-to mixin
+// @content - pass the block of properties to a mixin
+
+// 1st version
+//@mixin respond-to($media) {
+//    if $media == tablet  {
+//        @media (min-width: 700px) {
+//            @content
+//        }
+//    }
+//}
+
+// 2nd version
+// $tablet: 1024px; TODO: it's not possible use variable $tablet inside mixin
+@mixin respond-to($type:max-width, $query: 1024px) {
+  @media ($type: $query) {
+    @content;
+  }
+}

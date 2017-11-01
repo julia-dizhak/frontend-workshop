@@ -1,0 +1,45 @@
+// Discussed with Boris titles which we have for projects
+// big title font-size: 2.2em / font-weight: 500
+// main title font-size: 1.7em / font-weight: 400
+// sub title font-size: 1.35em / font-weight: 400
+// running text font-size: 1.1em / font-weight: 200 / 500 (special cases)
+// small text font-size: 0.95em / font-weight: 200
+// buttons font-size: 1em / font-weight: 200
+
+@mixin heading($size) {
+  @if $size == large {
+    font-size: 2.2em;
+    font-weight: 500;
+    line-height: 1.3;
+    @media(max-width: $tablet) {
+      font-size: 2em;
+    }
+    @media(max-width: $mobile) {
+      font-size: 1.7em;
+    }
+  }
+
+  @if $size == medium {
+    font-size: 1.7em;
+    font-weight: 400;
+    line-height: 1.3;
+    @media(max-width: $tablet) {
+      font-size: 1.35em;
+    }
+    @media(max-width: $mobile) {
+      font-size: 1.25em;
+    }
+  }
+
+  @if $size == small {
+    font-size: 1.35em;
+    line-height: 1.3;
+    font-weight: 400;
+    @media(max-width: $tablet) {
+      font-size: 1.25em;
+    }
+    @media(max-width: $mobile) {
+      font-size: 1.15em;
+    }
+  }
+}

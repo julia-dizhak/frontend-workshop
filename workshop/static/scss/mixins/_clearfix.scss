@@ -1,0 +1,50 @@
+// the clearfix: force an element to self-clear it's children
+// by Chris Coyier 2017 https://css-tricks.com/snippets/css/clear-fix/
+// IE 8 and up
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+//Version doesn't work
+//@mixin clearfix {
+//  content: "";
+//  display: table;
+//  clear: both;
+//}
+
+.group:after {
+  @include clearfix;
+}
+
+// In future, we might be able to do
+.group {
+  display: flow-root;
+}
+
+// Nicolas Gallagher
+//.group {
+//  &:before,
+//  &:after {
+//    content: "";
+//    display: table;
+//  }
+//  &:after {
+//    clear: both;
+//  }
+//}
+
+// via Dan Cederholm
+//.group:after {
+//  visibility: hidden;
+//  display: block;
+//  content: "";
+//  clear: both;
+//  height: 0;
+//}
+

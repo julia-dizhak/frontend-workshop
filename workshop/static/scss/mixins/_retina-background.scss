@@ -1,0 +1,13 @@
+// Sass retina background mixin
+
+@mixin retina-background-image($file, $type, $width:auto, $height:auto, $background-position:center) {
+  background-image: url($file + '.' + $type);
+  background-position: $background-position;
+  background-size: $width $height;
+  background-repeat: no-repeat;
+
+  // on retina, use image that's scaled by 2
+  @media #{$retina} {
+    background-image: url($file + '@2x.' + $type);
+  }
+}

@@ -1,0 +1,419 @@
+// News from moneypark magazine
+.moneypark-news {
+  max-width: 1400px;
+  margin: auto;
+  @media (max-width: $tablet) {
+    padding: 0 1em;
+  }
+
+  // slider
+  .slick-slider {
+    width: 100%;
+    &:before,
+    &:after {
+      top: 0;
+      bottom: 0;
+      width: 130px;
+      position: absolute;
+      content: '';
+      z-index: 1;
+    }
+    &:before {
+      @include linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.01) 1%,#fff 65%);
+      right: 0;
+    }
+    &:after {
+      @include linear-gradient(to left,rgba(255,255,255,0) 0,rgba(255,255,255,.01) 1%,#fff 65%);
+      left: 0;
+    }
+  }
+  .slick-list {
+    height: 470px;
+  }
+  .slick-slide {
+    background: $color-accent100;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(2, 3, 3, .22);
+    height: 460px;
+    margin: 4px 10px;
+  }
+  .slick-dots {
+    @media (min-width: $tablet+1) {
+      bottom: -60px;
+    }
+  }
+  .carousel-control {
+    &.right {
+      right: 10px;
+      &:focus {
+        right: 9px;
+      }
+    }
+    &.left {
+      left: 10px;
+      &:focus {
+        left: 9px;
+      }
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  img {
+    box-shadow: 0 0 0 1px $color-accent;
+    box-sizing: border-box;
+  }
+
+  .intro {
+    @include clearfix;
+    padding: 0 0 15px 0;
+    .main-title {
+      @include heading(medium);
+      margin: 0;
+      float: none;
+      text-align: center;
+      @media (max-width: $tablet) {
+        text-align: left;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+    }
+    .link-more {
+      @media (max-width: $tablet) {
+        margin-left: 0;
+      }
+      .text {
+        margin: 0 15px 0 0;
+      }
+    }
+  }
+
+  .news-link {
+    text-align: center;
+    margin: 30px 0;
+    @media (min-width: $tablet+1) {
+      margin-top: 80px;
+    }
+    @media (max-width: $tablet) {
+      text-align: left;
+    }
+    .link-more {
+      color: $color-accent600;
+    }
+  }
+
+  .news-list {
+    display: -webkit-flex;
+    display: flex;
+    align-items: stretch;
+    @media (max-width: $tablet) {
+      display: block;
+    }
+    @media (max-width: $mobile) {
+      flex-wrap: wrap;
+    }
+    @media (max-width: $phone) {
+      flex-direction: column;
+    }
+  }
+
+  .news-item {
+    @media (max-width: $tablet) {
+      @include clearfix;
+      width: 100%;
+      margin: 0 0 30px 0;
+      box-shadow: 0 0 12px rgba(2,3,3,.22);
+      background: $color-accent100;
+      position: relative;
+    }
+    @media (max-width: $phone) {
+      margin-bottom: 40px;
+      &:nth-child(2) {
+        margin: 0 0 40px 0;
+      }
+    }
+    @media (max-width: $min-device-width) {
+      height: 85px;
+      overflow: hidden;
+      position: relative;
+    }
+    .news-image {
+      display: inline-block;
+      overflow: hidden;
+      @media (max-width: $tablet) {
+        float: left;
+        max-width: 170px;
+        height: 115px;
+      }
+      @media (max-width: $mobile) {
+        height: inherit;
+      }
+      @media (max-width: $min-device-width) {
+        max-width: 120px;
+      }
+      img {
+        display: block;
+        @media (max-width: $tablet+1) {
+          padding: 1px;
+          box-sizing: border-box;
+          height: auto;
+          width: 100%;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        @media (max-width: $mobile) {
+          width: auto;
+          top: inherit;
+          transform: none;
+          max-width: 100%;
+        }
+        @media (max-width: $min-device-width) {
+          height: 85px;
+        }
+      }
+    }
+  }
+
+  .news-content {
+    padding: 10px 10px 0 10px;
+    @media (max-width: $tablet) {
+      float: right;
+      width: calc(100% - 195px);
+    }
+    @media (max-width: $mobile) {
+      padding-top: 5px;
+    }
+    @media (max-width: $min-device-width) {
+      width: calc(100% - 140px);
+    }
+  }
+
+  .news-head {
+    margin: 10px 0;
+    @media (max-width: $tablet) {
+      margin: 10px 0;
+    }
+    @media (max-width: $mobile) {
+      margin: 0;
+      height: 40px;
+      overflow: hidden;
+    }
+  }
+
+  .news-title,
+  .news-category {
+    transition: border 0.25s ease-in-out;
+    border-bottom: 1px solid transparent;
+  }
+  .news-title {
+    font-size: 1.15em;
+    line-height: 1.2;
+    font-weight: 400;
+    color: $color-default;
+    margin-bottom: 15px;
+    &:hover {
+      border-bottom: 1px solid $color-default;
+    }
+    @media (max-width: $mobile) {
+      font-size: 1em;
+    }
+  }
+  .news-category {
+    color: $color-accent600;
+    font-size: 0.95em;
+    &:hover {
+      color: $color-default;
+      border-bottom: 1px solid $color-default;
+    }
+    @media (max-width: $tablet) {
+      display: block;
+      overflow: hidden;
+    }
+  }
+
+  // Description of news
+  .news-desc {
+    @media (min-width: $tablet+1) {
+      max-height: 6.7em;
+      overflow: hidden;
+    }
+    @media (max-width: $tablet+1) {
+      position: inherit;
+    }
+    @media (max-width: $mobile) {
+      max-height: inherit;
+      overflow: visible;
+    }
+    .link-more {
+      padding: 2px 0 4px 0;
+      line-height: 1.4;
+      position: absolute;
+      content: "";
+      text-align: right;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      @include linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.01) 1%, #fff 19%);
+      @media (max-width: $tablet+1) {
+        width: calc(100% - 195px);
+        right: 5px;
+      }
+      @media (max-width: $mobile) {
+        background: transparent;
+      }
+      @media (max-width: $min-device-width) {
+        width: calc(100% - 140px);
+        line-height: 1.1;
+      }
+      svg {
+        margin: 0 5px 0 0;
+      }
+    }
+  }
+  .news-desc-content {
+    line-height: 1.4;
+    font-size: 0.95em;
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+// Moneypark news most popular block
+.news-popular-content {
+  position: relative;
+  width: 250px !important;
+  overflow: hidden;
+  @media (max-width: $tablet) {
+    width: 100% !important;
+    background: $color-accent100;
+    box-shadow: 0 0 12px rgba(2,3,3,.22);
+  }
+  @media (max-width: $mobile) {
+    margin: 30px 0 0 0;
+  }
+  .head {
+    padding: 4px 10px;
+    margin-bottom: 4px;
+    position: relative;
+    border-bottom: 1px solid #fff;
+    font-size: 1.15em;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+}
+.news-popular-list {
+  padding: 5px 10px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  @media (max-width: $tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  @media (max-width: $mobile) {
+    display: block;
+    padding: 0;
+  }
+  @media (max-width: $phone) {
+    padding: 3%;
+  }
+  li {
+    border-bottom: 1px solid #fff;
+    padding: 0 0 15px 0;
+    margin: 0 0 15px 0;
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
+    @media (max-width: $tablet) {
+      width: 32.5%;
+      border-bottom: none;
+      @include clearfix;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+    @media (max-width: $mobile) {
+      width: 48%;
+      border-bottom: 0;
+      padding: 0;
+      @include display-inline-block(top);
+    }
+    @media (max-width: $phone) {
+      width: 47.5%;
+      &:nth-child(2n-1) {
+        margin-right: 5%;
+      }
+      &:nth-child(3),
+      &:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+
+  .news-title {
+    font-size: 0.95em;
+    font-weight: 400;
+    color: $color-font;
+    margin: 0.5em 0;
+    padding: 0;
+    &:hover {
+      border-color: transparent;
+    }
+  }
+  .news-popular-img {
+    @media (max-width: $tablet) {
+      width: auto;
+      padding: 1px;
+      box-sizing: border-box;
+      max-height: 210px;
+    }
+    @media (max-width: $mobile) {
+      max-height: 160px;
+    }
+    @media (max-width: $phone) {
+      max-height: 115px;
+    }
+  }
+
+  .news-popular-head {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1.4;
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+    @media (max-width: $min-device-width) {
+      min-height: inherit;
+      margin-bottom: 10px;
+    }
+    .news-title {
+      display: block;
+      padding: 5px 0 0;
+      margin: 0;
+      transition: color 0.3s ease-in-out;
+      @media (max-width: $tablet) {
+        font-size: 1.15em;
+      }
+      @media (max-width: $mobile) {
+        font-size: 0.95em;
+      }
+      &:hover {
+        color: $color-default;
+      }
+    }
+  }
+}
+
+.no-moneypark-news {
+  @include heading(small);
+  text-align: center;
+}

@@ -1,0 +1,5 @@
+//Mixin inline block
+@mixin display-inline-block($vertical-alignment-middle:middle) {
+  display: inline-block;
+  vertical-align: $vertical-alignment-middle;
+}

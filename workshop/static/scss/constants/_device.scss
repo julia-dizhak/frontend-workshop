@@ -1,0 +1,19 @@
+// Devices
+$mac13: 2000px; //13inch = 1248px, 1280px ?
+$large-screen: 1400px;
+$screen: 1200px;
+
+$tablet: 1024px; // $large-screen: 64.063em; = 1025 from zurb foundation
+
+$surface: 960px;
+$tablet-portrait: 768px;
+$max-device-width: 62.5em;
+
+$mobile: 767px;
+$phone: 480px;
+$iphone6-plus: 414px;
+$iphone6: 375px;
+$min-device-width: 320px;
+
+$retina: "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)";
+// usage @media #{$retina} { ... }
