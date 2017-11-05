@@ -1,2 +1,10 @@
-@import "site/includes/news";
+@import "constants/color";
+@import "constants/device";
 
+@import "mixins/linear-gradient";
+@import "mixins/clearfix";
+@import "mixins/inline-block";
+
+@import "typography/headings";
+
+@import "site/news";

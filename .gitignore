@@ -13,3 +13,8 @@ db.sqlite3
 
 .DS_Store
 *.DS_Store
+
+.sass-cache
+.gulp-scss-cache
+assets/
+.bundle/
