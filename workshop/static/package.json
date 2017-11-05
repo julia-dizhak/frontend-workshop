@@ -1,0 +1,24 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "package json for frontend static",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "1.4.7",
+    "bower-away": "^1.1.2",
+    "jquery": "^3.2.1",
+    "@bower_components/angular": "angular/bower-angular#~1.6.6",
+    "@bower_components/jquery": "jquery/jquery-dist#~3.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julia Dizhak",
+  "license": "ISC",
+  "engines": {
+    "yarn": ">= 1.0.0"
+  }
+}

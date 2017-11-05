@@ -15,22 +15,42 @@
     <link rel="shortcut icon" href="{% static 'assets/dist/images/favicon/favicon.png' %}">
 
     {% block styles %}
-        <link rel="stylesheet" href="https://mpcdn.ch/static/assets/dist/css/design-guide.min.css">
+        <!--<link rel="stylesheet" href="https://mpcdn.ch/static/assets/dist/css/design-guide.min.css">-->
         {% block extra-styles %} {% endblock extra-styles %}
     {% endblock styles %}
 
     <link rel="stylesheet" href="//fast.fonts.net/cssapi/816217b7-a9cd-4813-9687-1860a0c2a2ce.css" type="text/css" media="screen">
 </head>
 
-<body {% block body_app %}{% endblock body_app %}
-      {% block body_ctrl %}{% endblock body_ctrl %}>
+<body {% block body_app %}ng-app="savingsPlanApp"{% endblock body_app %}
+      {% block body_ctrl %}ng-controller="SavingsPlanController"{% endblock body_ctrl %}>
 
 <div class="wrapper">
     <main class="{% block main_class %}main-wrap{% endblock main_class %}">
         {% block content %}{% endblock content %}
+
+        <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+        {% verbatim %}
+      <h1>Hello {{ yourName }}!</h1>
+{% endverbatim %}
+
+        <div ng-show="infoAreaBlock">
+            test
+        </div>
+
+
     </main>
 </div>
 
-{% block js %}{% endblock js %}
+{% block js %}
+    <!--<script src="{% static 'bower_components/jquery/dist/jquery.js' %}"></script>-->
+<script src="{% static 'node_modules/jquery/dist/jquery.js' %}"></script>
+
+    <script src="{% static 'node_modules/angular/angular.js' %}"></script>
+
+ <script src="{% static 'js/angular/apps/savings-plan.app.js' %}"></script>
+ <script src="{% static 'js/angular/controllers/savings-plan.ctrl.js' %}"></script>
+{% endblock js %}
 
 </body>
