@@ -2,8 +2,7 @@
 {% load svg %}
 
 <!DOCTYPE html>
-<!--[if (IEMobile 7)|(IE 9)]> <html class="ie"> <![endif]-->
-<!--[if (gte IE 11)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html itemscope itemtype="https://schema.org/WebPage"><!--<![endif]-->
+<html itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
@@ -47,7 +46,7 @@
     <script src="{% static 'node_modules/jquery/dist/jquery.js' %}"></script>
     <script src="{% static 'node_modules/angular/angular.js' %}"></script>
 
-    <!--transpile by babel in es2015 syntax-->
+    <!-- transpile by babel in es2015 syntax -->
     <script src="{% static 'assets/dist/js/es6.js' %}"></script>
 
     <script src="{% static 'js/angular/apps/savings-plan.app.js' %}"></script>
@@ -55,3 +54,5 @@
 {% endblock js %}
 
 </body>
+
+</html>
