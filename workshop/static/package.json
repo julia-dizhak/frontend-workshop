@@ -10,6 +10,8 @@
     "jquery": "^3.2.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "bower-away": "^1.1.2",
     "gulp": "^3.9.1",
     "gulp-cli": "^1.4.0",
@@ -19,7 +21,13 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp test"
+    "start": "babel js -d assets/dist/js"
+  },
+  "babel": {
+    "presets": ["es2015"],
+    "plugins": [],
+    "minified": true,
+    "ignore": "test.js"
   },
   "author": "Julia Dizhak",
   "license": "ISC",

@@ -8,6 +8,8 @@
     function SavingsPlanController($scope, $rootScope, $timeout, $location) {
         init();
 
+        const print = 'Hello';
+
         $scope.infoAreaBlock = true;
 
         function init() {
