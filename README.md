@@ -1,6 +1,8 @@
 # frontend-workshop
 frontend-workshop in France for DL
 
+presentation
+
 # yarn
 yarn init -y
 yarn add jquery@1.6 (you don't need mention --save)
@@ -11,9 +13,10 @@ yarn add jquery@1.6 --offline
 yarn add global gulp
 yarn add [package] [--dev/-D]
 yarn start
+https://github.com/sheerun/bower-away
 
 # interpolate django
-https://github.com/sheerun/bower-away
+
 
 # gulp
 
