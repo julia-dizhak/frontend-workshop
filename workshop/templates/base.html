@@ -26,19 +26,33 @@
 
 <div class="wrapper">
     <main class="{% block main_class %}main-wrap{% endblock main_class %}">
-        {% block content %}{% endblock content %}
+        <div class="container">
+            {% block content %}{% endblock content %}
 
-        <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-        {% verbatim %}
-      <h1>Hello {{ yourName }}!</h1>
-{% endverbatim %}
+            <div>
+                <hr>
+                <input type="text" ng-model="yourName" placeholder="Enter a name here">
 
-        <div ng-show="infoAreaBlock">
-            test
+                {% verbatim %}
+                    <h1>Hello {{ yourName }}!</h1>
+                {% endverbatim %}
+
+                <div ng-show="infoAreaBlock">
+                    test
+                </div>
+            </div>
+
+            <div ng-app="app">
+                <h2>Filter </h2>
+                {% verbatim %}
+                    <!--<span>{$ independence |reverse $}</span>-->
+                    <span>{{ independence | reverse }}</span>
+                {% endverbatim %}
+                <span ng-bind="test | abs"></span>
+                <span></span>
+                <!--<span class="value" ng-bind="amortisationValue | abs | number:0"></span>-->
+            </div>
         </div>
-
-
     </main>
 </div>
 
@@ -51,6 +65,9 @@
 
     <script src="{% static 'js/angular/apps/savings-plan.app.js' %}"></script>
     <script src="{% static 'js/angular/controllers/savings-plan.ctrl.js' %}"></script>
+
+    <script src="{% static 'js/angular/apps/app.js' %}"></script>
+    <script src="{% static 'js/angular/filters/reverse.js' %}"></script>
 {% endblock js %}
 
 </body>

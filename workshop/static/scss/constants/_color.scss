@@ -9,7 +9,7 @@ $color-default: #789e56;
 $color-primary: #fbbf4e;
 $color-primary100: #db8f00;
 
-$color-secondary: #76b2f5;
+$color-secondary200: #76b2f5;
 $color-secondary100: #87aff5;
 $color-secondary500: #7CA0C7;
 $color-secondary600: #4995e3;
@@ -24,16 +24,6 @@ $color-error: #ff5656; // TODO: replace by $color-warning
 
 $color-pink: #ffced1;
 
-// TODO: refactor constants for confirmation messages after Task-9506
-//Confirmation messages colors
-//variant 2
-//$color-warning: #fbbf4e;
-//$color-success: #799c4b;
-//$color-error: #ff5656;
-//variant 1
-//$color-primary: #fbbf4e;
-//$color-default: #799c4b;
-//$color-error: #ff5656;
 $background-confirmation-warning: #cb8624;
 $background-confirmation-success: #8fcada;
 $background-confirmation-error: #cc747c;

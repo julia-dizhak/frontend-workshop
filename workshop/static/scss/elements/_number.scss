@@ -1,0 +1,13 @@
+.num {
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1) inset;
+  font-size: 1em;
+  line-height: 1;
+  margin: -3px 10px 0 0;
+  padding: 6px 10px;
+  @include display-inline-block;
+  text-align: center;
+  background-color: $color-default;
+  color: #fff;
+}

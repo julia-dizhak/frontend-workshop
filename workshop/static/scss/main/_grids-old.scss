@@ -1,0 +1,198 @@
+// Grid old (layout) which used on conent pages
+.brick-row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  max-width: 62.5em;
+  min-width: 320px;
+  width: 100%;
+
+  @include clearfix;
+}
+.brick-row .brick-row {
+  margin: 0 -1em;
+  max-width: none;
+  min-width: inherit;
+  width: auto;
+}
+
+.brick-column,
+.brick-columns {
+  box-sizing: border-box;
+  padding-left: 1em;
+  padding-right: 1em;
+  float: left;
+  &:before,
+  &:after  {
+    box-sizing: border-box;
+  }
+}
+
+.brick-large-1 {
+  width: 8.33333%;
+}
+.brick-large-2 {
+  width: 16.66667%;
+}
+.brick-large-3 {
+  width: 25%;
+}
+.brick-large-4 {
+  width: 33.33333%;
+}
+.brick-large-5 {
+  width: 41.66667%;
+}
+.brick-large-6 {
+  width: 50%;
+}
+.brick-large-7 {
+  width: 58.33333%;
+}
+.brick-large-8 {
+  width: 66.66667%;
+}
+.brick-large-9 {
+  width: 75%;
+}
+.brick-large-10 {
+  width: 83.33333%;
+}
+.brick-large-11 {
+  width: 91.66667%;
+}
+.brick-large-12 {
+  width: 100%;
+}
+
+// Responsive grid
+@media only screen {
+  .brick-columns {
+    float: left;
+  }
+
+  .brick-small-1 {
+    width: 8.33333%;
+  }
+  .brick-small-2 {
+    width: 16.66667%;
+  }
+  .brick-small-3 {
+    width: 25%;
+  }
+  .brick-small-4 {
+    width: 33.33333%;
+  }
+  .brick-small-5 {
+    width: 41.66667%;
+  }
+  .brick-small-6 {
+    width: 50%;
+  }
+  .brick-small-7 {
+    width: 58.33333%;
+  }
+  .brick-small-8 {
+    width: 66.66667%;
+  }
+  .brick-small-9 {
+    width: 75%;
+  }
+  .brick-small-10 {
+    width: 83.33333%;
+  }
+  .brick-small-11 {
+    width: 91.66667%;
+  }
+  .brick-small-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+  .brick-columns {
+    float: left;
+  }
+
+  .brick-medium-1 {
+    width: 8.33333%;
+  }
+  .brick-medium-2 {
+    width: 16.66667%;
+  }
+  .brick-medium-3 {
+    width: 25%;
+  }
+  .brick-medium-4 {
+    width: 33.33333%;
+  }
+  .brick-medium-5 {
+    width: 41.66667%;
+  }
+  .brick-medium-6 {
+    width: 50%;
+  }
+  .brick-medium-7 {
+    width: 58.33333%;
+  }
+  .brick-medium-8 {
+    width: 66.66667%;
+  }
+  .brick-medium-9 {
+    width: 75%;
+  }
+  .brick-medium-10 {
+    width: 83.33333%;
+  }
+  .brick-medium-11 {
+    width: 91.66667%;
+  }
+  .brick-medium-12 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 64.063em) {
+  .brick-columns {
+    float: left;
+  }
+
+  .brick-large-1 {
+    width: 8.33333%;
+  }
+  .brick-large-2 {
+    width: 16.66667%;
+  }
+  .brick-large-3 {
+    width: 25%;
+  }
+  .brick-large-4 {
+    width: 33.33333%;
+  }
+  .brick-large-5 {
+    width: 41.66667%;
+  }
+  .brick-large-6 {
+    width: 50%;
+  }
+  .brick-large-7 {
+    width: 58.33333%;
+  }
+  .brick-large-8 {
+    width: 66.66667%;
+  }
+  .brick-large-9 {
+    width: 75%;
+  }
+  .brick-large-10 {
+    width: 83.33333%;
+  }
+  .brick-large-11 {
+    width: 91.66667%;
+  }
+  .brick-large-12 {
+    width: 100%;
+  }
+}

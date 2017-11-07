@@ -1,0 +1,135 @@
+// Custom links
+@mixin custom-link {
+  cursor: pointer;
+  line-height: 1.1;
+  text-decoration: none;
+  font-size: 1.1em;
+  color: $color-secondary200;
+  @include display-inline-block;
+  svg {
+    @include display-inline-block;
+  }
+  .text {
+    @include display-inline-block;
+    margin: 0 5px 0 0;
+  }
+}
+
+@mixin custom-link-hover {
+  transition: all 0.26s ease-in-out;
+  padding: 1px 0 1px 0;
+  &:hover {
+    .text {
+      color: $color-secondary200;
+      text-decoration: underline;
+    }
+  }
+}
+
+.link {
+  @include custom-link;
+  @include custom-link-hover;
+}
+
+.link-more {
+  @include custom-link;
+  @include custom-link-hover;
+  .svg-arrow,
+  .svg-popup {
+    width: 24px;
+    height: 24px;
+    fill: $color-secondary200;
+  }
+  .svg-arrow {
+    stroke: $color-secondary200;
+    stroke-width: 2px;
+  }
+}
+
+// Show / hide rates
+.link-plus {
+  color: $color-accent600;
+  cursor: pointer;
+  line-height: 1.1;
+  text-decoration: none;
+  @include display-inline-block;
+  .icon {
+    position: relative;
+    padding-right: 32px;
+    @include display-inline-block;
+    &:after {
+      position: absolute;
+      content: "+";
+      top: 50%;
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.2;
+      border-radius: 50%;
+      padding: 0;
+      min-width: 22px;
+      text-align: center;
+      border: 1px solid $color-accent600;
+      transform: translateY(-50%);
+    }
+  }
+  &:hover {
+    color: $color-secondary200;
+    .icon {
+      &:after {
+        border: 1px solid $color-secondary200;
+      }
+    }
+  }
+  // inside faq component
+  &.active,
+  &.panel-open {
+    .icon {
+      &:after {
+        content: "-";
+      }
+    }
+  }
+}
+
+.link-edit,
+.link-download {
+  @include custom-link;
+  @include custom-link-hover;
+  .svg-arrow {
+    width: 24px;
+    height: 24px;
+    fill: $color-secondary200;
+    stroke: $color-secondary200;
+    stroke-width: 3px;
+  }
+}
+.link-edit {
+  .svg-arrow {
+    transform: rotate(-180deg) scale(1.01);
+  }
+  .text {
+    margin: 0 0 0 5px;
+  }
+}
+
+.link-download {
+  .svg-arrow {
+    transform: rotate(90deg) scale(1.01);
+  }
+  .text {
+    margin: 0 5px 0 0;
+  }
+}
+
+.link-cancel {
+  font-size: 1.1em;
+  display: inline-block;
+  vertical-align: middle;
+  transition: border 0.1s ease-in-out;
+  color: $color-font;
+  border-bottom: 1px solid rgba(0,0,0,0);
+  &:hover {
+    color: $color-font;
+    border-bottom: 1px solid $color-font;
+  }
+}

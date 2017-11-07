@@ -1,0 +1,66 @@
+// Disabled buttons / Button send on landing page
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin animated-button-loader($loader-color, $backgroud-color, $size) {
+  text-indent: -9999em;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  position: relative;
+  animation: loader 1.4s infinite linear;
+  transform: translateZ(0);
+  @include linear-gradient(to right, #fff 10%, rgba(255, 255, 255, 0) 42%);
+  &:before {
+    width: 50%;
+    height: 50%;
+    background: $loader-color;
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+  }
+  &:after {
+    background: $backgroud-color;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+button,
+input {
+  &[disabled] {
+    background: darken($color-accent, 5%); // if form has color $color-accent100 then disabled buttons is not visible
+    color: $color-font;
+    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+    .icon {
+      padding-right: 10px;
+      &:after {
+        display: none;
+      }
+    }
+    svg {
+      display: none; // hide svg icon and show animated loader
+    }
+    .loader {
+      margin-left: 8px;
+      @include display-inline-block;
+      @include animated-button-loader(#fff, darken($color-accent, 5%), 25px);
+    }
+  }
+}

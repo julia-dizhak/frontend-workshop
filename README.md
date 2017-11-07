@@ -8,10 +8,10 @@ Test project to show front-end development tools from moneypark projects
 ### [Yarn](https://yarnpkg.com)
 #### Benfits
 <ul>
-<li>ultra fast: yarn caches every package it downloads so it never needs to download it again<li>
-<li>secure: yarn uses checksums to verify the integrity of every installed package before its code is executed<li>
-<li>reliable: with yarn.lock file format, and a deterministic algorithm for installs, Yarn is able to guarantee that an install that worked on one system will work exactly the same way on any system.<li>
-<ul>
+<li>ultra fast: yarn caches every package it downloads so it never needs to download it again</li>
+<li>secure: yarn uses checksums to verify the integrity of every installed package before its code is executed</li>
+<li>reliable: with yarn.lock file format, and a deterministic algorithm for installs, Yarn is able to guarantee that an install that worked on one system will work exactly the same way on any system.</li>
+</ul>
 
 ```installation
 brew install yarn
@@ -26,12 +26,12 @@ yarn add [package] [--dev/-D]
 yarn start
 ```
 
-#### Migrating from npm
+#### [Migrating from npm](https://yarnpkg.com/lang/en/docs/migrating-from-npm/)
 Migrating from npm should be a fairly easy process for most users. Yarn can consume the same package.json format as npm, and can install any package from the npm registry.
 
-####  Bower away](https://github.com/sheerun/bower-away)
+#### [Bower away](https://github.com/sheerun/bower-away)
 Convert your project from Bower to Yarn.
-
+https://bower.io/blog/2017/how-to-migrate-away-from-bower/
 
 
 

@@ -1,0 +1,19 @@
+//@mixin currency($margin-right:0, $margin-left:0) {
+//  @include display-inline-block;
+//  font-size: 0.95em;
+//
+//  margin-right: $margin-right;
+//  margin-left: $margin-left;
+//}
+
+// CHF currency element
+.currency {
+  font-size: 0.95em;
+  margin-right: 5px;
+  text-transform: uppercase;
+  @include display-inline-block(baseline);
+}
+
+.percent {
+  @include display-inline-block(middle);
+}

@@ -1,0 +1,67 @@
+// Inputs
+input {
+  &.placeholder,
+  &:-moz-placeholder,
+  &::-moz-placeholder,
+  &::-webkit-input-placeholder,
+  &::-ms-input-placeholder {
+    color: $color-accent600;
+  }
+
+  // Auto-hide placeholder text upon focus
+  // it's not working if use one selector input:focus::-webkit-input-placeholder, input:focus:-moz-placeholder, ...
+  &:focus {
+    &::-webkit-input-placeholder {
+      color: transparent;
+    }
+  }
+  &:focus {
+    &:-moz-placeholder {
+      color: transparent;
+    }
+  }
+  &:focus {
+    &::-moz-placeholder {
+      color: transparent;
+    }
+  }
+  &:focus {
+    &:-ms-input-placeholder {
+      color: transparent;
+    }
+  }
+
+  &[type="number"] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      margin: 0;
+
+      // hide arrows for spinners
+      -moz-appearance: textfield; //support Firefox 29
+      appearance: none;
+    }
+  }
+}
+
+.input-custom {
+  cursor: pointer;
+  border-radius: 0;
+  border: 1px solid $color-accent600;
+  padding: 11px 15px 11px;
+  font-size: 1.1em;
+  background-color: #fff;
+  box-sizing: border-box;
+  min-height: 46px; // prevent broken input field if it's empty or doesn't have placeholder
+  appearance: none;
+}
+
+.custom-input-invalid {
+  border-color: #fff;
+  box-shadow: inset 0 0 0 2px $color-error !important;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}

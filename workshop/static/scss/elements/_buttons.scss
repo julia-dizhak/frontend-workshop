@@ -1,0 +1,126 @@
+// Btn build with svg, will be replaced with elements / buttons
+// height of buttons is 54px
+@mixin button-custom {
+  color: #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  border-radius: 8px;
+  padding: 11px 25px 11px;
+  box-shadow: inset 0 0 0 1px rgba(27,31,35,0.2);
+  transition: box-shadow 0.15s ease-in-out;
+  @include display-inline-block;
+  @media (max-width: $tablet-portrait) {
+    padding: 11px;
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+    padding: 11px 8px;
+  }
+  &:hover {
+    box-shadow: inset 0 0 45px rgba(0, 0, 0, 0.2);
+  }
+  .text {
+    @include display-inline-block;
+    margin: 0 8px 0 0;
+  }
+  svg {
+    @include display-inline-block;
+  }
+}
+
+.btn-request,
+.btn-next {
+  @include button-custom;
+  @include linear-gradient(0deg, rgb(100, 139, 240) 0, rgb(124, 160, 250) 100%);
+  .svg-request {
+    height: 24px; // svg height for all buttons should be the same
+    width: 22px;
+    fill: #fff;
+  }
+}
+
+.btn-property-rating {
+  @include button-custom;
+  @include linear-gradient(0deg, rgb(100, 139, 240) 0, rgb(124, 160, 250) 100%);
+  .svg-star {
+    height: 24px;
+    fill: #fff;
+  }
+}
+.btn-rates {
+  @include button-custom;
+  @include linear-gradient(0deg, rgb(100, 139, 240) 0, rgb(124, 160, 250) 100%);
+  .svg-rates {
+    width: 34px;
+    height: 24px;
+    fill: #fff;
+  }
+}
+
+// Refinance online button
+.btn-online-request {
+  @include button-custom;
+  @include linear-gradient(0deg, rgb(100, 139, 240) 0, rgb(124, 160, 250) 100%);
+  svg {
+    width: 27px;
+    height: 24px;
+    fill: #fff;
+  }
+}
+
+.btn-accent {
+  @include button-custom;
+  @include linear-gradient(0deg, #c5c5c5 0%, #e3e3e3 100%);
+  color: $color-font;
+}
+
+.btn-register {
+  @include button-custom;
+  background: $color-accent100;
+  color: $color-font;
+  &:hover {
+    background: darken($color-accent100, 2%);
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.26);
+  }
+}
+
+.btn-send {
+  @include button-custom;
+  @include linear-gradient(0deg, rgb(100, 139, 240) 0, rgb(124, 160, 250) 100%);
+  margin: auto;
+  display: block;
+  @media (max-width: $phone) {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .svg-email-send {
+    width: 53px;
+    height: 24px;
+    fill: #fff;
+  }
+}
+
+.btn-calculate {
+  @include button-custom;
+  @include linear-gradient(0deg, rgb(100, 139, 240) 0, rgb(124, 160, 250) 100%);
+  .text {
+    margin: 0 10px 0 0;
+  }
+  .svg-calc {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+  }
+}
+
+// TODO: remove inherited from meeting object page
+.button-green {
+  @include button-custom;
+  @include linear-gradient(0deg, rgb(100, 139, 240) 0, rgb(124, 160, 250) 100%);
+  .ripples {
+    display: none;
+  }
+}

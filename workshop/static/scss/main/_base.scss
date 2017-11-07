@@ -1,0 +1,67 @@
+body {
+  font: 400 100%/120% 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: $color-font;
+
+  & > iframe {
+    display: block;
+    height: 0;
+  }
+
+  // don't show img from counters
+  & > img {
+    position: absolute;
+    text-indent: -2000px;
+    max-width: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $color-font;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  clear: both; // TODO, Task-265: check online mortgage templates and put class row where it's absent, after remove clear
+  @media (max-width: $tablet) {
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+.container-extra {
+  max-width: $large-screen;
+  margin: auto;
+  @media (max-width: $tablet) {
+    max-width: inherit;
+  }
+}
+.container-wide {
+  width: 100%;
+  margin: auto;
+}
+
+// Website
+.main-wrap {
+  padding: 30px 0;
+  @media(max-width: $mobile) {
+    padding: 15px 0;
+  }
+  @media(max-width: $iphone6-plus) {
+     padding: 15px 0 0 0;
+  }
+}
+
+// Show dots across form and wrap
+.dots {
+  position: relative;
+  margin: 30px 0 0 0;
+  padding: 30px 0 0 0;
+  border-top: 2px dotted $color-accent;
+  border-radius: 1px;
+  @media (max-width: $mobile) {
+    margin: 15px 0 0;
+    padding: 15px 0 0;
+  }
+}
