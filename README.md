@@ -33,43 +33,44 @@ Migrating from npm should be a fairly easy process for most users. Yarn can cons
 Convert your project from Bower to Yarn.
 https://bower.io/blog/2017/how-to-migrate-away-from-bower/
 
+### Gulp
+```run default task
+./node_modules/.bin/gulp
+```
 
-
-babel
-./node_modules/.bin/babel js/es6.js -o js/es2015.js --presets es2015
+### Babel
 https://raw.githubusercontent.com/codedojo/babel-intro/master/README.md
 
+```run
+yarn run
+```
 
-
-
-# interpolate django
-
-
-# gulp
-
-# TODO
-gulp clean dist
-yarn lock git ?
-
-gulp pug html
-
-svg
-
-
-remove bower
-
-angular router
-
-
-next future
-webapck
-
-babel
 yarn add babel-cli -D
 yarn add babel-preset-es2015 -D
 ./node_modules/.bin/babel js/es6.js --watch --out-file assets/dist/js/es2015.js
 
-deploy withou assets?
+```
+./node_modules/.bin/babel js/es6.js -o js/es2015.js --presets es2015
+```
+
+### Karma
+
+```install
+yarn add karma -dev
+```
 
 
-npm run build
+### Interpolate django
+
+
+
+# TODO: describe list
+gulp clean dist
+gulp pug html
+svg
+yarn.lock
+angular router
+deploy
+
+Next future
+Webpack
