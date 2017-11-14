@@ -1,9 +1,16 @@
-# frontend-workshop
+# Frontend workshop
 Test project to show front-end development tools from moneypark projects
 
 [Presentation](https://julia-dizhak.github.io/presentations/topic-moneypark-frontend-workshop/)
 
+
 ## Development
+
+### Gulp
+```run default task
+./node_modules/.bin/gulp
+```
+
 
 ### [Yarn](https://yarnpkg.com)
 #### Benfits
@@ -33,10 +40,6 @@ Migrating from npm should be a fairly easy process for most users. Yarn can cons
 Convert your project from Bower to Yarn.
 https://bower.io/blog/2017/how-to-migrate-away-from-bower/
 
-### Gulp
-```run default task
-./node_modules/.bin/gulp
-```
 
 ### Babel
 https://raw.githubusercontent.com/codedojo/babel-intro/master/README.md
@@ -65,12 +68,17 @@ yarn add karma -dev
 
 
 # TODO: describe list
-gulp clean dist
-gulp pug html
-svg
+idea with describe what moneypark is doing like value
+gulp: clean dist, pug html
+
+svg: describe
+
 yarn.lock
+
 angular router
+
 deploy
 
-Next future
 Webpack
+
+linters

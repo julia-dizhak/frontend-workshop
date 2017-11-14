@@ -11,22 +11,23 @@
 
     <title>Frontend workshop</title>
 
-    <link rel="shortcut icon" href="{% static 'assets/dist/images/favicon/favicon.png' %}">
+    <link rel="shortcut icon" href="{% static 'assets/dest/images/favicon/favicon.png' %}">
 
     {% block styles %}
-        <!--<link rel="stylesheet" href="https://mpcdn.ch/static/assets/dist/css/design-guide.min.css">-->
+     <link rel="stylesheet" href="{% static 'assets/dest/css/styles.min.css' %}" media="screen" type="text/css">
         {% block extra-styles %} {% endblock extra-styles %}
     {% endblock styles %}
-
-    <link rel="stylesheet" href="//fast.fonts.net/cssapi/816217b7-a9cd-4813-9687-1860a0c2a2ce.css" type="text/css" media="screen">
 </head>
 
-<body {% block body_app %}ng-app="savingsPlanApp"{% endblock body_app %}
-      {% block body_ctrl %}ng-controller="SavingsPlanController"{% endblock body_ctrl %}>
+<body>
+
+<!--<body {% block body_app %}ng-app="savingsPlanApp"{% endblock body_app %}-->
+      <!--{% block body_ctrl %}ng-controller="SavingsPlanController"{% endblock body_ctrl %}>-->
 
 <div class="wrapper">
     <main class="{% block main_class %}main-wrap{% endblock main_class %}">
         <div class="container">
+
             {% block content %}{% endblock content %}
 
             <div>
@@ -42,15 +43,22 @@
                 </div>
             </div>
 
-            <div ng-app="app">
+            <div ng-app="blogApp">
+                <div ng-controller="blogController">
+
+
                 <h2>Filter </h2>
-                {% verbatim %}
-                    <!--<span>{$ independence |reverse $}</span>-->
-                    <span>{{ independence | reverse }}</span>
-                {% endverbatim %}
-                <span ng-bind="test | abs"></span>
-                <span></span>
+                <!--{% verbatim %}-->
+                    <!--&lt;!&ndash;<span>{$ independence |reverse $}</span>&ndash;&gt;-->
+                    <!--<span>{{ independence | reverse }}</span>-->
+                <!--{% endverbatim %}-->
+                <span ng-bind=" test1 | reversetest"></span>
+                    <!--<span ng-bind=" 1234 | test"></span>-->
+                    <!--<span ng-bind=" 10 | percent"></span>-->
+                <!--<span ng-bind="test | abs"></span>-->
+                <span ng-bind="test | percent"></span>
                 <!--<span class="value" ng-bind="amortisationValue | abs | number:0"></span>-->
+                </div>
             </div>
         </div>
     </main>
@@ -61,13 +69,16 @@
     <script src="{% static 'node_modules/angular/angular.js' %}"></script>
 
     <!-- transpile by babel in es2015 syntax -->
-    <script src="{% static 'assets/dist/js/es6.js' %}"></script>
+    <!--<script src="{% static 'assets/dist/js/es6.js' %}"></script>-->
 
     <script src="{% static 'js/angular/apps/savings-plan.app.js' %}"></script>
     <script src="{% static 'js/angular/controllers/savings-plan.ctrl.js' %}"></script>
 
-    <script src="{% static 'js/angular/apps/app.js' %}"></script>
-    <script src="{% static 'js/angular/filters/reverse.js' %}"></script>
+ <script src="{% static 'js/angular/filters/reverse.js' %}"></script>
+
+    <script src="{% static 'js/angular/apps/blog.app.js' %}"></script>
+<script src="{% static 'js/angular/controllers/blog.ctrl.js' %}"></script>
+
 {% endblock js %}
 
 </body>
