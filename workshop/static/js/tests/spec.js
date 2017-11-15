@@ -1,15 +1,20 @@
-describe('Filters', function(){ //describe your object type
+ 'use strict';
 
-    beforeEach(module('MyApp')); //load module
-    describe('reverse',function(){ //describe your app name
+describe('Filters', function(){ // describe your object type
+
+    beforeEach(module('reverseStringFilter')); // load module
+
+    describe('reverse',function(){ // describe app name
         var reverse;
-        beforeEach(inject(function($filter){ //initialize your filter
-            reverse = $filter('reverse',{});
+
+        beforeEach(inject(function($filter){ // initialize filter
+            reverse = $filter('reverseString',{});
         }));
-        it('Should reverse a string', function(){  //write tests
-            expect(reverse('rahil')).toBe('lihar'); //pass
-            expect(reverse('don')).toBe('nod'); //pass
-            //expect(reverse('jam')).toBe('oops'); // this test should fail
+
+        it('Should reverse a string', function(){  // write tests
+            expect(reverse('stone')).toBe('enots'); // pass
+            expect(reverse('don')).toBe('nod'); // pass
+           // expect(reverse('jam')).toBe('oops'); // this test should fail
         });
     });
 });

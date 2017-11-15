@@ -12,7 +12,7 @@
         $scope.link = 'erom nrael';
 
         function init() {
-            console.log('test');
+
         }
     }
 })();

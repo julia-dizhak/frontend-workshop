@@ -11,7 +11,7 @@
 
     <title>Frontend workshop</title>
 
-    <link rel="shortcut icon" href="{% static 'assets/dest/images/favicon/favicon.png' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon/favicon.png' %}">
 
     {% block styles %}
         {% block extra-styles %} {% endblock extra-styles %}
@@ -32,16 +32,13 @@
     <script src="{% static 'node_modules/angular/angular.js' %}"></script>
 
     <!-- transpile by babel in es2015 syntax -->
-    <script src="{% static 'assets/dist/js/es6.js' %}"></script>
+    <script src="{% static 'assets/dest/js/es6.js' %}"></script>
 
-    <!--<script src="{% static 'js/angular/apps/savings-plan.app.js' %}"></script>-->
-    <!--<script src="{% static 'js/angular/controllers/savings-plan.ctrl.js' %}"></script>-->
+    <script src="{% static 'assets/dest/js/angular/filters/reverse.js' %}"></script>
+    <script src="{% static 'assets/dest/js/angular/filters/percent.js' %}"></script>
 
-    <script src="{% static 'js/angular/filters/reverse.js' %}"></script>
-    <script src="{% static 'js/angular/filters/percent.js' %}"></script>
-
-    <script src="{% static 'js/angular/apps/blog.app.js' %}"></script>
-    <script src="{% static 'js/angular/controllers/blog.ctrl.js' %}"></script>
+    <script src="{% static 'assets/dest/js/angular/apps/blog.app.js' %}"></script>
+    <script src="{% static 'assets/dest/js/angular/controllers/blog.ctrl.js' %}"></script>
 {% endblock js %}
 
 </body>
