@@ -8,12 +8,14 @@
 {% endblock extra-styles %}
 
 {% block content %}
-<div class="moneypark-news">
+<div ng-app="blogApp"
+     ng-controller="blogController"
+     class="moneypark-news">
     <div class="blog">
         {% spaceless %}
             <h1 class="main-title">
                 <a href="https://moneypark.ch/news-wissen/" class="link-more">
-                    <span class="text">News &amp; Wissen</span>
+                    <span class="text">10 Ways to Speed Up Your Website – and Improve Conversion</span>
                     {% svg 'arrow' %}
                 </a>
             </h1>
@@ -23,6 +25,8 @@
                         <article class="news-content">
                             <header class="news-head">
                                 <a href="" class="news-title" target="_blank" itemprop="name">{{ post.title | safe }}</a>
+                                &nbsp;
+                                <a href="" class=""><span ng-bind="link | reverseString"></span></a>
                             </header>
                             <p class="news-desc" itemprop="description">
                                 <span class="news-desc-content">{{ post.text|linebreaksbr }}</span>

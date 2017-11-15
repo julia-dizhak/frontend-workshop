@@ -3,7 +3,7 @@
 
     angular
         .module('blogApp', [
-            'reversetestFilter',
+            'reverseStringFilter',
             'percentFilter'
         ]);
 })();

@@ -4,15 +4,15 @@
     angular.module('blogApp')
         .controller('blogController', blogController);
 
-    blogController.$inject = ['$scope', '$rootScope', '$timeout', '$location'];
-    function blogController($scope, $rootScope, $timeout, $location) {
+    blogController.$inject = ['$scope'];
+
+    function blogController($scope) {
         init();
 
-        $scope.test = 10;
-        $scope.test1 = 'testterrfkgjfdgn';
+        $scope.link = 'erom nrael';
 
         function init() {
-
+            console.log('test');
         }
     }
 })();
