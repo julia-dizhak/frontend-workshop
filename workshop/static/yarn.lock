@@ -33,13 +33,13 @@ ajv@^5.1.0:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.3.0"
 
-angular-mocks@^1.6.6:
-  version "1.6.6"
-  resolved "https://registry.yarnpkg.com/angular-mocks/-/angular-mocks-1.6.6.tgz#c93018e7838c6dc5ceaf1a6bcf9be13c830ea515"
+angular-mocks@^1.5.8:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/angular-mocks/-/angular-mocks-1.8.0.tgz#9d161fe2102e47e46ff78a4226e4dfec27c060c4"
 
-angular@1.4.7:
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/angular/-/angular-1.4.7.tgz#f8990e71c9cd180a842b07e09e0801fe84e83878"
+angular@1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.8.0.tgz#b1ec179887869215cab6dfd0df2e42caa65b1b51"
 
 ansi-align@^2.0.0:
   version "2.0.0"
