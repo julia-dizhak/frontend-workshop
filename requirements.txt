@@ -6,6 +6,6 @@ idna==2.6
 pipreqs==0.4.9
 pytz==2017.2
 requests==2.18.4
-urllib3==1.22
+urllib3==1.26.5
 yarg==0.1.9
 django-inline-svg==0.1.1
